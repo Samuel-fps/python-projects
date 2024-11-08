@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/samuel/Projects/Python/Practice/152-Batch-Image-Resizing/penv"
+set -gx VIRTUAL_ENV "/home/samuel/Projects/Python/Practice/penv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

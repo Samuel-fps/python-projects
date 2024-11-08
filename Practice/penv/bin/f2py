@@ -1,4 +1,4 @@
-#!/home/samuel/Projects/Python/Practice/152-Batch-Image-Resizing/penv/bin/python3
+#!/home/samuel/Projects/Python/Practice/penv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
