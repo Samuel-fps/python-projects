@@ -10,3 +10,7 @@ La aplicación incluye:
 - Vistas para varias páginas, cada una con un encabezado `<h1>` para indicar el nombre de la página o sección.
   
 Este proyecto es ideal para comprender los fundamentos de Flask, como la creación de rutas y el renderizado de plantillas.
+
+## Link web
+
+https://samuelfps.pythonanywhere.com/
