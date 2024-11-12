@@ -1,1 +1,32 @@
+# Ignorar el entorno virtual
+penv/
+venv/
+.env/
 webmapenv/
+
+# Ignorar archivos generados por PyInstaller
+dist/
+build/
+*.spec
+
+# Ignorar base de datos
+*.db
+*.sqlite3
+
+# Ignorar archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de log
+*.log
+
+# Archivos de configuración de IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Otros archivos temporales
+*.bak
+*.tmp
+.DS_Store
