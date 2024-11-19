@@ -1,39 +1,131 @@
 <LoginScreen>:
     GridLayout:
         cols: 1
-        GridLayout:
-            cols: 1
-            Label:
-                text: "User Login"
-            TextInput:
-                hint_text: "Username"
-            TextInput:
-                hint_text: "Password"
+        padding: 15, 15
+        spacing: 20, 20
+        Label:
+            text: "User Login"
+            font_size: 24
+            color: 1, 1, 1, 1
+            bold: True
+        TextInput:
+            id: username
+            hint_text: "Username"
+            font_size: 18
+            padding: [10, 10]
+        TextInput:
+            id: password
+            hint_text: "Password"
+            font_size: 18
+            password: True
+        RelativeLayout:
             Button:
                 text: "Login"
-
+                on_press: root.login(root.ids.username.text, root.ids.password.text)
+                size_hint: 0.3, 0.5
+                pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+        Label:
+            id: login_wrong
+            text: ""
+            color: 1, 0, 0, 1 
+            font_size: 14
         GridLayout:
             cols: 2
+            spacing: 10, 0
             Button:
                 text: "Forgot Password?"
+                font_size: 16
+                size_hint_y: None
+                height: 40
             Button:
                 text: "Sign Up"
+                font_size: 16
+                size_hint_y: None
+                height: 40
+                background_color: 0, 1, 0, 1 
                 on_press: root.sign_up()
 
-<SignUpScreen>
+<LoginScreenSuccess>:
     GridLayout:
         cols: 1
+        padding: 20
+        spacing: 15
+        Button:
+            text: "Logout"
+            font_size: 18
+            size_hint_y: None
+            height: 50
+            background_color: 1, 0, 0, 1  # Rojo
+            on_press: root.log_out()
+        Label:
+            text: "Saying:"
+            font_size: 18
+        Label:
+            id: saying
+            text: ""
+            font_size: 16
+        Button:
+            text: "New"
+            font_size: 18
+            size_hint_y: None
+            height: 50
+            background_color: 0, 0.5, 1, 1  # Azul claro
+            on_press: root.get_saying()
+
+<SignUpScreen>:
+    GridLayout:
+        cols: 1
+        padding: 20
+        spacing: 15
         Label:
             text: "Sign up"
+            font_size: 24
+            color: 0, 0, 1, 1  # Azul
+            bold: True
         TextInput:
+            id: username
             hint_text: "Username"
+            font_size: 18
+            multiline: False
+            padding: [10, 10]
         TextInput:
+            id: password
             hint_text: "Password"
+            font_size: 18
+            multiline: False
+            password: True
+            padding: [10, 10]
         Button:
             text: "Submit"
+            font_size: 18
+            size_hint_y: None
+            height: 50
+            background_color: 0, 0.5, 1, 1  # Azul claro
+            on_press: root.add_user(root.ids.username.text, root.ids.password.text)
 
-<RootWidget>
+<SignUpScreenSuccess>:
+    GridLayout:
+        cols: 1
+        padding: 20
+        spacing: 15
+        Label:
+            text: "Sign up successful!"
+            font_size: 20
+            color: 0, 1, 0, 1  # Verde
+        Button:
+            text: "Login page"
+            font_size: 18
+            size_hint_y: None
+            height: 50
+            background_color: 0, 0.5, 1, 1  # Azul claro
+            on_press: root.go_to_login()
+
+<RootWidget>:
     LoginScreen:
         name: "login_screen"
     SignUpScreen:
         name: "Sign_up_screen"
+    SignUpScreenSuccess:
+        name: "sign_up_screen_success"
+    LoginScreenSuccess:
+        name: "login_screen_success"
