@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="../static/main.css">
+    </head>
+    <body>
+        <h1>Data collector</h1>
+            <form action="{{ url_for('success') }}" method="POST" class="container">
+                <input type="email" title="Email" placeholder="Email" name="email" required>
+                <input type="text" title="Name" placeholder="Name" name="name">
+                <input type="text" title="Country" placeholder="Country" name="country">
+                <input type="number" min="0" max="150" title="age" placeholder="Age" name="age">
+                <button><b>Enviar</b></button>
+            </form>
+    </body>
+</HTML>

@@ -1,0 +1,34 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6; /* Suave tono gris */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container styles */
+.success-container {
+    text-align: center;
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+/* Heading styles */
+.success-container h1 {
+    color: #4caf50; /* Verde para éxito */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+.success-container p {
+    font-size: 1.2rem;
+    color: #555;
+}
